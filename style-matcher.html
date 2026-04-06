@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style Matcher | Aura Salon</title>
+    <link rel="stylesheet" href="/src/index.css">
+  </head>
+  <body class="bg-black text-white font-sans antialiased overflow-x-hidden">
+    
+    <!-- Navigation -->
+    <nav class="w-full bg-black text-white py-8 flex flex-col items-center sticky top-0 z-50 border-b border-white/5">
+      <div class="mb-8">
+        <h1 class="font-serif text-5xl tracking-[0.3em] uppercase font-bold text-white">Aura</h1>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4 md:gap-6 px-4">
+        <a href="/" class="nav-btn">Home</a>
+        <a href="/team.html" class="nav-btn">Our Team</a>
+        <a href="/services.html" class="nav-btn">Services</a>
+        <a href="/style-matcher.html" class="nav-btn">Style Matcher</a>
+        <a href="/contact.html" class="nav-btn">Contact Us</a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Style Matcher -->
+      <section id="style-matcher" class="py-24 bg-zinc-950 min-h-screen">
+        <div class="container mx-auto px-4 max-w-4xl">
+          <div class="text-center mb-16">
+            <h2 class="font-serif text-4xl md:text-5xl mb-4">Style Matcher</h2>
+            <p class="text-gray-400 tracking-widest uppercase text-sm">AI-Powered Personal Styling</p>
+          </div>
+          <div class="grid md:grid-cols-2 gap-12 items-start">
+            <div class="space-y-8 bg-black/50 p-8 rounded-sm border border-white/5">
+              <div class="space-y-2">
+                <label class="text-xs uppercase tracking-widest text-gray-500">Your Hair Type</label>
+                <select id="hair-type" class="w-full bg-transparent border-b border-white/20 py-2 focus:border-white outline-none transition-colors text-white">
+                  <option value="" disabled selected class="bg-black">Select Hair Type</option>
+                  <option value="Straight" class="bg-black">Straight</option>
+                  <option value="Wavy" class="bg-black">Wavy</option>
+                  <option value="Curly" class="bg-black">Curly</option>
+                  <option value="Coily" class="bg-black">Coily</option>
+                  <option value="Fine" class="bg-black">Fine</option>
+                  <option value="Thick" class="bg-black">Thick</option>
+                </select>
+              </div>
+              <div class="space-y-2">
+                <label class="text-xs uppercase tracking-widest text-gray-500">Desired Vibe</label>
+                <input type="text" id="desired-look" placeholder="e.g. Modern, Classic, Bold" class="w-full bg-transparent border-b border-white/20 py-2 focus:border-white outline-none transition-colors text-white">
+              </div>
+              <button id="find-style-btn" class="w-full bg-white text-black py-4 font-bold uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-gray-200 transition-all">
+                Find My Style
+              </button>
+            </div>
+            <div id="recommendation-result" class="min-h-[300px] flex items-center justify-center border border-dashed border-white/10 rounded-sm p-8 relative overflow-hidden">
+              <div class="text-center text-gray-600" id="empty-state">
+                <p>Fill out the form to see your <br /> personalized recommendation</p>
+              </div>
+              <div id="loading-state" class="hidden flex flex-col items-center gap-4">
+                <div class="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-white"></div>
+                <p class="text-sm tracking-widest uppercase animate-pulse">Consulting Stylist...</p>
+              </div>
+              <div id="result-content" class="hidden space-y-6">
+                <!-- Result will be injected here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-12 bg-black border-t border-white/5">
+      <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="text-center md:text-left">
+          <h2 class="font-serif text-3xl tracking-widest uppercase mb-2">Aura</h2>
+          <p class="text-xs text-gray-500 uppercase tracking-widest">Luxury Hair Salon & Spa</p>
+        </div>
+        <div class="text-[10px] uppercase tracking-[0.2em] text-gray-600">
+          © 2026 Aura Salon. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

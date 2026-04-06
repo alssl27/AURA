@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aura Salon | Luxury Hair Care</title>
+    <link rel="stylesheet" href="/src/index.css">
+  </head>
+  <body class="bg-black text-white font-sans antialiased overflow-x-hidden">
+    
+    <!-- Navigation -->
+    <nav class="w-full bg-black text-white py-8 flex flex-col items-center sticky top-0 z-50 border-b border-white/5">
+      <div class="mb-8">
+        <h1 class="font-serif text-5xl tracking-[0.3em] uppercase font-bold text-white">Aura</h1>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4 md:gap-6 px-4">
+        <a href="/" class="nav-btn">Home</a>
+        <a href="/team.html" class="nav-btn">Our Team</a>
+        <a href="/services.html" class="nav-btn">Services</a>
+        <a href="/style-matcher.html" class="nav-btn">Style Matcher</a>
+        <a href="/contact.html" class="nav-btn">Contact Us</a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero -->
+      <section id="home" class="relative min-h-[90vh] bg-black flex items-center pt-12">
+        <div class="container mx-auto px-4 md:px-12 flex flex-col md:flex-row items-center justify-center gap-16 md:gap-24">
+          <div class="w-full md:w-[45%] relative z-10 animate-fade-in-left">
+            <div class="relative aspect-[3/4] max-w-md mx-auto overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=2069&auto=format&fit=crop" alt="Beautiful Hair" class="w-full h-full object-cover" referrerPolicy="no-referrer">
+            </div>
+          </div>
+          <div class="w-full md:w-[45%] text-center md:text-left flex flex-col items-center md:items-start gap-12 animate-fade-in-right">
+            <h2 class="font-serif text-6xl md:text-8xl leading-[1.1] tracking-tight">
+              Ready for a <br />
+              <span class="italic text-gray-300">Fresh Look?</span>
+            </h2>
+            <div class="flex flex-col gap-6 items-center md:items-start">
+              <button class="bg-black text-white border border-white/30 px-12 py-5 text-sm font-bold tracking-[0.3em] uppercase hover:bg-white hover:text-black transition-all duration-500 rounded-sm">
+                Book Your Appointment
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 opacity-40 animate-pulse">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" /></svg>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-12 bg-black border-t border-white/5">
+      <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="text-center md:text-left">
+          <h2 class="font-serif text-3xl tracking-widest uppercase mb-2">Aura</h2>
+          <p class="text-xs text-gray-500 uppercase tracking-widest">Luxury Hair Salon & Spa</p>
+        </div>
+        <div class="text-[10px] uppercase tracking-[0.2em] text-gray-600">
+          © 2026 Aura Salon. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
